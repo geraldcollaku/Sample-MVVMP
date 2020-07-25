@@ -1,5 +1,5 @@
 //
-//  UserCell.swift
+//  ReportsCell.swift
 //  Sample-MVVMP
 //
 //  Created by Gerald Collaku on 25.07.20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserCell: UITableViewCell, Reusable {
+class ReportsCell: UITableViewCell, Reusable {
     
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var casesLabel: UILabel!

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		681FC5D824CCC05C00F9377A /* ReportsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5D724CCC05C00F9377A /* ReportsVM.swift */; };
-		681FC5DC24CCC26700F9377A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5DA24CCC26700F9377A /* UserCell.swift */; };
-		681FC5DD24CCC26700F9377A /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681FC5DB24CCC26700F9377A /* UserCell.xib */; };
+		681FC5DC24CCC26700F9377A /* ReportsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5DA24CCC26700F9377A /* ReportsCell.swift */; };
+		681FC5DD24CCC26700F9377A /* ReportsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681FC5DB24CCC26700F9377A /* ReportsCell.xib */; };
 		681FC5E024CCC29600F9377A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5DF24CCC29600F9377A /* Reusable.swift */; };
+		681FC5E424CCE27D00F9377A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5E324CCE27D00F9377A /* Spinner.swift */; };
 		682CF1DF24CCB5BD00BC48F5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1DE24CCB5BD00BC48F5 /* ApiManager.swift */; };
 		682CF1E224CCB98E00BC48F5 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E124CCB98E00BC48F5 /* Reports.swift */; };
-		682CF1E724CCBA6F00BC48F5 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E624CCBA6F00BC48F5 /* UserPresenter.swift */; };
-		682CF1E924CCBDCA00BC48F5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E824CCBDCA00BC48F5 /* UserViewController.swift */; };
+		682CF1E724CCBA6F00BC48F5 /* ReportsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E624CCBA6F00BC48F5 /* ReportsPresenter.swift */; };
+		682CF1E924CCBDCA00BC48F5 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E824CCBDCA00BC48F5 /* ReportsViewController.swift */; };
 		685CDB2A24C8E74800A13785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CDB2924C8E74800A13785 /* AppDelegate.swift */; };
 		685CDB2C24C8E74800A13785 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CDB2B24C8E74800A13785 /* SceneDelegate.swift */; };
 		685CDB3124C8E74800A13785 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 685CDB2F24C8E74800A13785 /* Main.storyboard */; };
@@ -47,13 +48,14 @@
 
 /* Begin PBXFileReference section */
 		681FC5D724CCC05C00F9377A /* ReportsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVM.swift; sourceTree = "<group>"; };
-		681FC5DA24CCC26700F9377A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		681FC5DB24CCC26700F9377A /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		681FC5DA24CCC26700F9377A /* ReportsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsCell.swift; sourceTree = "<group>"; };
+		681FC5DB24CCC26700F9377A /* ReportsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsCell.xib; sourceTree = "<group>"; };
 		681FC5DF24CCC29600F9377A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		681FC5E324CCE27D00F9377A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		682CF1DE24CCB5BD00BC48F5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		682CF1E124CCB98E00BC48F5 /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
-		682CF1E624CCBA6F00BC48F5 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
-		682CF1E824CCBDCA00BC48F5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		682CF1E624CCBA6F00BC48F5 /* ReportsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsPresenter.swift; sourceTree = "<group>"; };
+		682CF1E824CCBDCA00BC48F5 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		685CDB2624C8E74800A13785 /* Sample-MVVMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-MVVMP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685CDB2924C8E74800A13785 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		685CDB2B24C8E74800A13785 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,8 +103,8 @@
 		681FC5D924CCC23E00F9377A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				681FC5DA24CCC26700F9377A /* UserCell.swift */,
-				681FC5DB24CCC26700F9377A /* UserCell.xib */,
+				681FC5DA24CCC26700F9377A /* ReportsCell.swift */,
+				681FC5DB24CCC26700F9377A /* ReportsCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				681FC5DF24CCC29600F9377A /* Reusable.swift */,
+				681FC5E324CCE27D00F9377A /* Spinner.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -142,8 +145,8 @@
 		682CF1E424CCBA3F00BC48F5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				682CF1E824CCBDCA00BC48F5 /* UserViewController.swift */,
-				682CF1E624CCBA6F00BC48F5 /* UserPresenter.swift */,
+				682CF1E824CCBDCA00BC48F5 /* ReportsViewController.swift */,
+				682CF1E624CCBA6F00BC48F5 /* ReportsPresenter.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -341,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681FC5DD24CCC26700F9377A /* UserCell.xib in Resources */,
+				681FC5DD24CCC26700F9377A /* ReportsCell.xib in Resources */,
 				685CDB3624C8E74B00A13785 /* LaunchScreen.storyboard in Resources */,
 				685CDB3324C8E74B00A13785 /* Assets.xcassets in Resources */,
 				685CDB3124C8E74800A13785 /* Main.storyboard in Resources */,
@@ -372,14 +375,15 @@
 				681FC5E024CCC29600F9377A /* Reusable.swift in Sources */,
 				685CDB6824C8F11800A13785 /* AppConfig.swift in Sources */,
 				681FC5D824CCC05C00F9377A /* ReportsVM.swift in Sources */,
-				682CF1E924CCBDCA00BC48F5 /* UserViewController.swift in Sources */,
+				682CF1E924CCBDCA00BC48F5 /* ReportsViewController.swift in Sources */,
+				681FC5E424CCE27D00F9377A /* Spinner.swift in Sources */,
 				686BEEC424CCB1F200F831A7 /* Endpoint.swift in Sources */,
 				682CF1DF24CCB5BD00BC48F5 /* ApiManager.swift in Sources */,
-				682CF1E724CCBA6F00BC48F5 /* UserPresenter.swift in Sources */,
+				682CF1E724CCBA6F00BC48F5 /* ReportsPresenter.swift in Sources */,
 				682CF1E224CCB98E00BC48F5 /* Reports.swift in Sources */,
 				686BEEC624CCB2E000F831A7 /* RequestItems.swift in Sources */,
 				685CDB2A24C8E74800A13785 /* AppDelegate.swift in Sources */,
-				681FC5DC24CCC26700F9377A /* UserCell.swift in Sources */,
+				681FC5DC24CCC26700F9377A /* ReportsCell.swift in Sources */,
 				685CDB2C24C8E74800A13785 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ protocol ViewProtocol: AnyObject {
     func render(_ state: ViewState)
 }
 
-class UserPresenter {
+class ReportsPresenter {
     
     private let apiManager = ApiManager(session: Session())
     weak var view: ViewProtocol?

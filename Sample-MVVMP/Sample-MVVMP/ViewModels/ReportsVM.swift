@@ -41,7 +41,7 @@ struct CountryReportsVM: RowVM {
     }
     
     func cell(_ tableView: UITableView, for indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.reuseIdentifier, for: indexPath) as! UserCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ReportsCell.reuseIdentifier, for: indexPath) as! ReportsCell
         cell.viewModel = self
         return cell
     }

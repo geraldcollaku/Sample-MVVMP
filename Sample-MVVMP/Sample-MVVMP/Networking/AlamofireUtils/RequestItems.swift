@@ -14,7 +14,7 @@ enum RequestType {
     
     case events(_: String)
     
-    //MARK: - User
+    //MARK: - Reports
     
     case getDailyCovidReports
     
