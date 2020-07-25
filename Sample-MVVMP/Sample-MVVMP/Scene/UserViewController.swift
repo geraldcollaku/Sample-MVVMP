@@ -12,7 +12,12 @@ class UserViewController: UIViewController, ViewProtocol {
     @IBOutlet weak var tableView: UITableView!
     
     private var presenter: UserPresenter!
-    private var state: ViewState = .notLoaded
+    
+    private var state: ViewState = .notLoaded {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +28,6 @@ class UserViewController: UIViewController, ViewProtocol {
     
     func render(_ state: ViewState) {
         self.state = state
-        tableView.reloadData()
     }
 }
 
@@ -35,8 +39,8 @@ extension UserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch state {
-        case .loaded(_):
-            return 1
+        case .loaded(let reportsVM):
+            return reportsVM.reports.count
         default:
             return 0
         }
@@ -44,8 +48,9 @@ extension UserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch state {
-        case .loaded(let userVM):
-            return userVM.cell(tableView, for: indexPath)
+        case .loaded(let reportsVM):
+            let rowVM = reportsVM.reports[indexPath.row]
+            return rowVM.cell(tableView, for: indexPath)
         default:
             fatalError("invalid state")
         }

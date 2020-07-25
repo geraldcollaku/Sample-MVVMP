@@ -11,7 +11,7 @@ import Alamofire
 enum ViewState {
     case notLoaded
     case loading
-    case loaded(UserVM)
+    case loaded(ReportsVM)
     case error
 }
 
@@ -34,11 +34,11 @@ class UserPresenter {
         
         view?.render(.loading)
         
-        apiManager.call(type: RequestItemsType.getUser) { (result: Swift.Result<User, Error>) in
+        apiManager.call(type: RequestType.getDailyCovidReports) { (result: Swift.Result<[CountryReports], Error>) in
             
             switch result {
             case .success(let user):
-                let userVM = UserVM(from: user)
+                let userVM = ReportsVM(from: user)
                 self.view?.render(.loaded(userVM))
                 break
             case .failure:

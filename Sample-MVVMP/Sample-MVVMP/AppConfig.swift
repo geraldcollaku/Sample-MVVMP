@@ -9,6 +9,6 @@ import Foundation
 
 enum AppConfig {
     
-    static let baseUrl = "https://private-ab878b-mediumsoa.apiary-mock.com/"
+    static let baseUrl = "https://coronavirus-19-api.herokuapp.com/"
     
 }

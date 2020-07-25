@@ -8,20 +8,21 @@
 import Foundation
 import Alamofire
 
-enum RequestItemsType {
+enum RequestType {
     
     // MARK: - Events
+    
     case events(_: String)
     
-    //MARK: User
+    //MARK: - User
     
-    case getUser
+    case getDailyCovidReports
     
 }
 
 //MARK: - Endpoint types
 
-extension RequestItemsType: EndPoint {
+extension RequestType: EndPoint {
 
     var baseUrl: String {
         return AppConfig.baseUrl
@@ -31,8 +32,8 @@ extension RequestItemsType: EndPoint {
         switch self {
         case .events(_):
             return "events"
-        case .getUser:
-            return "user"
+        case .getDailyCovidReports:
+            return "countries"
         }
     }
     
@@ -41,8 +42,7 @@ extension RequestItemsType: EndPoint {
     }
     
     var headers: HTTPHeaders? {
-        return ["Content-Type": "application/json",
-                "X-Requested-With": "XMLHttpRequest"]
+        return nil
     }
     
     var url: URL {
@@ -55,8 +55,5 @@ extension RequestItemsType: EndPoint {
             return JSONEncoding.default
         }
     }
-    
-    var version: String {
-        return "/v0_1"
-    }
+
 }

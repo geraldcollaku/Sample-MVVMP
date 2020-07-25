@@ -10,7 +10,6 @@ import Foundation
 
 enum NetworkError: Error {
     case noData
-    case failure
 }
 
 class ApiManager {

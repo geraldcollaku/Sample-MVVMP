@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		681FC5D824CCC05C00F9377A /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5D724CCC05C00F9377A /* UserVM.swift */; };
+		681FC5D824CCC05C00F9377A /* ReportsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5D724CCC05C00F9377A /* ReportsVM.swift */; };
 		681FC5DC24CCC26700F9377A /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5DA24CCC26700F9377A /* UserCell.swift */; };
 		681FC5DD24CCC26700F9377A /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 681FC5DB24CCC26700F9377A /* UserCell.xib */; };
 		681FC5E024CCC29600F9377A /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681FC5DF24CCC29600F9377A /* Reusable.swift */; };
 		682CF1DF24CCB5BD00BC48F5 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1DE24CCB5BD00BC48F5 /* ApiManager.swift */; };
-		682CF1E224CCB98E00BC48F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E124CCB98E00BC48F5 /* User.swift */; };
+		682CF1E224CCB98E00BC48F5 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E124CCB98E00BC48F5 /* Reports.swift */; };
 		682CF1E724CCBA6F00BC48F5 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E624CCBA6F00BC48F5 /* UserPresenter.swift */; };
 		682CF1E924CCBDCA00BC48F5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682CF1E824CCBDCA00BC48F5 /* UserViewController.swift */; };
 		685CDB2A24C8E74800A13785 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CDB2924C8E74800A13785 /* AppDelegate.swift */; };
@@ -24,7 +24,7 @@
 		685CDB4C24C8E74B00A13785 /* Sample-MVVMPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CDB4B24C8E74B00A13785 /* Sample-MVVMPUITests.swift */; };
 		685CDB5B24C8E82F00A13785 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 685CDB5A24C8E82F00A13785 /* Alamofire */; };
 		685CDB6824C8F11800A13785 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685CDB6724C8F11800A13785 /* AppConfig.swift */; };
-		686BEEC424CCB1F200F831A7 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BEEC324CCB1F200F831A7 /* EndpointType.swift */; };
+		686BEEC424CCB1F200F831A7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BEEC324CCB1F200F831A7 /* Endpoint.swift */; };
 		686BEEC624CCB2E000F831A7 /* RequestItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686BEEC524CCB2E000F831A7 /* RequestItems.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,12 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		681FC5D724CCC05C00F9377A /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		681FC5D724CCC05C00F9377A /* ReportsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsVM.swift; sourceTree = "<group>"; };
 		681FC5DA24CCC26700F9377A /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		681FC5DB24CCC26700F9377A /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		681FC5DF24CCC29600F9377A /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		682CF1DE24CCB5BD00BC48F5 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		682CF1E124CCB98E00BC48F5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		682CF1E124CCB98E00BC48F5 /* Reports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reports.swift; sourceTree = "<group>"; };
 		682CF1E624CCBA6F00BC48F5 /* UserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
 		682CF1E824CCBDCA00BC48F5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		685CDB2624C8E74800A13785 /* Sample-MVVMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-MVVMP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +68,7 @@
 		685CDB4B24C8E74B00A13785 /* Sample-MVVMPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sample-MVVMPUITests.swift"; sourceTree = "<group>"; };
 		685CDB4D24C8E74B00A13785 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685CDB6724C8F11800A13785 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
-		686BEEC324CCB1F200F831A7 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		686BEEC324CCB1F200F831A7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		686BEEC524CCB2E000F831A7 /* RequestItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 		682CF1E024CCB97F00BC48F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				682CF1E124CCB98E00BC48F5 /* User.swift */,
+				682CF1E124CCB98E00BC48F5 /* Reports.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 		682CF1E324CCBA3000BC48F5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				681FC5D724CCC05C00F9377A /* UserVM.swift */,
+				681FC5D724CCC05C00F9377A /* ReportsVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 		686BEEC224CCB1E000F831A7 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				686BEEC324CCB1F200F831A7 /* EndpointType.swift */,
+				686BEEC324CCB1F200F831A7 /* Endpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -371,12 +371,12 @@
 			files = (
 				681FC5E024CCC29600F9377A /* Reusable.swift in Sources */,
 				685CDB6824C8F11800A13785 /* AppConfig.swift in Sources */,
-				681FC5D824CCC05C00F9377A /* UserVM.swift in Sources */,
+				681FC5D824CCC05C00F9377A /* ReportsVM.swift in Sources */,
 				682CF1E924CCBDCA00BC48F5 /* UserViewController.swift in Sources */,
-				686BEEC424CCB1F200F831A7 /* EndpointType.swift in Sources */,
+				686BEEC424CCB1F200F831A7 /* Endpoint.swift in Sources */,
 				682CF1DF24CCB5BD00BC48F5 /* ApiManager.swift in Sources */,
 				682CF1E724CCBA6F00BC48F5 /* UserPresenter.swift in Sources */,
-				682CF1E224CCB98E00BC48F5 /* User.swift in Sources */,
+				682CF1E224CCB98E00BC48F5 /* Reports.swift in Sources */,
 				686BEEC624CCB2E000F831A7 /* RequestItems.swift in Sources */,
 				685CDB2A24C8E74800A13785 /* AppDelegate.swift in Sources */,
 				681FC5DC24CCC26700F9377A /* UserCell.swift in Sources */,

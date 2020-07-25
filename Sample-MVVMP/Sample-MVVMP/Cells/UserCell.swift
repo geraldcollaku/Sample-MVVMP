@@ -9,10 +9,15 @@ import UIKit
 
 class UserCell: UITableViewCell, Reusable {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var casesLabel: UILabel!
+    @IBOutlet weak var todayCasesLabel: UILabel!
+    @IBOutlet weak var deathsLabel: UILabel!
+    @IBOutlet weak var recoveredLabel: UILabel!
+    @IBOutlet weak var activeLabel: UILabel!
     
-    var viewModel: UserVM? {
+    
+    var viewModel: CountryReportsVM? {
         didSet {
             updateView()
         }
@@ -22,8 +27,12 @@ class UserCell: UITableViewCell, Reusable {
         guard let viewModel = viewModel else {
             return
         }
-        nameLabel.text = viewModel.name
-        emailLabel.text = viewModel.email
+        countryLabel.text = viewModel.name
+        casesLabel.text = viewModel.cases
+        todayCasesLabel.text = viewModel.todayCases
+        deathsLabel.text = viewModel.deaths
+        recoveredLabel.text = viewModel.recovered
+        activeLabel.text = viewModel.active
     }
     
 }
