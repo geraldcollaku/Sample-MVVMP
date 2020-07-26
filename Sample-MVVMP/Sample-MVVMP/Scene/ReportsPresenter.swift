@@ -30,7 +30,7 @@ class ReportsPresenter {
     
     // MARK: - Public methods
     
-    func getUser() {
+    func loadCovidReports() {
         
         view?.render(.loading)
         

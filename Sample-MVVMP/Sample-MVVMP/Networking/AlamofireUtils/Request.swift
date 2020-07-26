@@ -30,8 +30,10 @@ extension RequestType: EndPoint {
     
     var path: String {
         switch self {
+        
         case .events(_):
             return "events"
+            
         case .getDailyCovidReports:
             return "countries"
         }

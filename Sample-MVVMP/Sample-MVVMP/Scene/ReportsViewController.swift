@@ -24,7 +24,7 @@ class ReportsViewController: UIViewController, ViewProtocol {
         
         tableView.register(ReportsCell.nib(), forCellReuseIdentifier: ReportsCell.reuseIdentifier)
         presenter = ReportsPresenter(view: self)
-        presenter.getUser()
+        presenter.loadCovidReports()
     }
     
     private func updateView() {
