@@ -21,9 +21,10 @@ class ReportsViewController: UIViewController, ViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(ReportsCell.nib(), forCellReuseIdentifier: ReportsCell.reuseIdentifier)
         presenter = ReportsPresenter(view: self)
         presenter.getUser()
-        tableView.register(ReportsCell.nib(), forCellReuseIdentifier: ReportsCell.reuseIdentifier)
     }
     
     private func updateView() {
@@ -34,8 +35,12 @@ class ReportsViewController: UIViewController, ViewProtocol {
             Spinner.start(from: self.view)
             
         case .loaded:
-            Spinner.stop()
             tableView.reloadData()
+            
+        case .error:
+            let title = "Error"
+            let action = UIAlertAction(title: "OK", style: .default)
+            displayAlert(with: title, actions: [action])
             
         default:
             break

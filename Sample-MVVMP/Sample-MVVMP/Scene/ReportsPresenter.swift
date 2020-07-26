@@ -37,10 +37,12 @@ class ReportsPresenter {
         apiManager.call(type: RequestType.getDailyCovidReports) { (result: Swift.Result<[CountryReports], Error>) in
             
             switch result {
-            case .success(let user):
-                let userVM = ReportsVM(from: user)
-                self.view?.render(.loaded(userVM))
+            
+            case .success(let reports):
+                let reportsVM = ReportsVM(from: reports)
+                self.view?.render(.loaded(reportsVM))
                 break
+                
             case .failure:
                 self.view?.render(.error)
             }
