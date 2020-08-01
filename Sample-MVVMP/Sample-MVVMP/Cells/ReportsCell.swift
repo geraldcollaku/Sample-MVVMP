@@ -16,7 +16,6 @@ class ReportsCell: UITableViewCell, Reusable {
     @IBOutlet weak var recoveredLabel: UILabel!
     @IBOutlet weak var activeLabel: UILabel!
     
-    
     var viewModel: CountryReportsVM? {
         didSet {
             updateView()

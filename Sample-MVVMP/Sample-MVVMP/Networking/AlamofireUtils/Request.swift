@@ -10,10 +10,6 @@ import Alamofire
 
 enum RequestType {
     
-    // MARK: - Events
-    
-    case events(_: String)
-    
     //MARK: - Reports
     
     case getDailyCovidReports
@@ -30,10 +26,6 @@ extension RequestType: EndPoint {
     
     var path: String {
         switch self {
-        
-        case .events(_):
-            return "events"
-            
         case .getDailyCovidReports:
             return "countries"
         }

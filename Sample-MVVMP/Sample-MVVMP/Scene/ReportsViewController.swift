@@ -10,7 +10,7 @@ import UIKit
 class ReportsViewController: UIViewController, ViewProtocol {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     private var presenter: ReportsPresenter!
     
     private var state: ViewState = .notLoaded {
@@ -24,7 +24,7 @@ class ReportsViewController: UIViewController, ViewProtocol {
         
         tableView.register(ReportsCell.nib(), forCellReuseIdentifier: ReportsCell.reuseIdentifier)
         presenter = ReportsPresenter(view: self)
-        presenter.loadCovidReports()
+        presenter.loadInitialCovidReports()
     }
     
     private func updateView() {
@@ -33,24 +33,42 @@ class ReportsViewController: UIViewController, ViewProtocol {
         switch state {
         case .loading:
             Spinner.start(from: self.view)
+            break
             
         case .loaded:
-            tableView.reloadData()
+            UIView.transition(with: tableView, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.tableView.reloadData()
+            })
+
+            break
             
-        case .error:
-            let title = "Error"
+        case .error(let description):
+            let title = description.localizedDescription
             let action = UIAlertAction(title: "OK", style: .default)
             displayAlert(with: title, actions: [action])
+            break
             
         default:
             break
         }
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // MARK: - ViewProtocol
     
     func render(_ state: ViewState) {
         self.state = state
+    }
+    
+    @IBAction func filterAction(_ sender: Any) {
+        presenter.loadFilteredReports(true)
+    }
+    
+    @IBAction func resetFilterAction(_ sender: Any) {
+        presenter.loadFilteredReports(false)
     }
     
 }

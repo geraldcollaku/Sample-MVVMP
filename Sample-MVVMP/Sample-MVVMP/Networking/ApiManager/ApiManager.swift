@@ -9,9 +9,17 @@ import Alamofire
 import Foundation
 
 enum NetworkError: Error {
-    case noData
-    
+    case dataNotFound
+
+    var localizedDescription: String {
+        switch self {
+        case .dataNotFound:
+            return NSLocalizedString("No data found. Please try again...", comment: "")
+        }
+    }
 }
+
+typealias Handler<T> = (Swift.Result<T, Error>) -> Void
 
 class ApiManager {
     
@@ -21,16 +29,18 @@ class ApiManager {
         self.sessionManager = session
     }
     
-    func call<T: Codable>(type: EndPoint, parameters: Parameters? = nil, handler: @escaping (Swift.Result<T, Error>) -> Void) {
+     func call<T: Codable>(endpoint: EndPoint, parameters: Parameters? = nil, handler: @escaping Handler<T>) {
         
-        self.sessionManager.request(type.url, method: type.httpMethod, parameters: parameters, encoding: type.encoding, headers: type.headers).validate().responseJSON { (data) in
+        self.sessionManager.request(endpoint.url, method: endpoint.httpMethod, parameters: parameters, encoding: endpoint.encoding, headers: endpoint.headers).validate().responseJSON { (data) in
             
             do {
-                guard let jsonData = data.data else {
-                    throw NetworkError.noData
+                guard let data = data.data else {
+                    handler(.failure(NetworkError.dataNotFound))
+                    return
                 }
-                let result = try JSONDecoder().decode(T.self, from: jsonData)
-                handler(.success(result))
+                
+                let responseObject = try JSONDecoder().decode(T.self, from: data)
+                handler(.success(responseObject))
                 
             } catch {
                 handler(.failure(error))

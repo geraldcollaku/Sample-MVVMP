@@ -7,17 +7,36 @@
 
 import UIKit
 
-struct ReportsVM {
+struct ReportsVM: Equatable {
     
     private(set) var reports: [CountryReportsVM]
     
     init(from reports: [CountryReports]) {
         self.reports = []
+
         reports.forEach { report in
             let report = CountryReportsVM(from: report)
             self.reports.append(report)
         }
     }
+    
+    func filteringReports() -> ReportsVM {
+        var newVM = self
+        
+        newVM.reports = self.reports.compactMap{ (item) -> CountryReportsVM? in
+            if let name = item.name, !name.contains("World")  {
+                    return nil
+            }
+            return item
+        }
+        
+        return newVM
+    }
+    
+    static func == (lhs: ReportsVM, rhs: ReportsVM) -> Bool {
+        return lhs.reports.count != rhs.reports.count
+    }
+    
 }
 
 struct CountryReportsVM: RowVM {
